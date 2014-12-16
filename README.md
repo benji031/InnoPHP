@@ -4,8 +4,8 @@ InnoPHP
 Framwork PHP
 
 
-Created by : 
-KADEH Ahmed
-MEKKID Amine
-PINTO Christophe
+<strong>Created by : </strong><br/>
+KADEH Ahmed<br/>
+MEKKID Amine<br/>
+PINTO Christophe<br/>
 DENEUX Benjamin
