@@ -1,0 +1,26 @@
+{
+	"modules" : [
+		{
+			"name" 		: "Accueil",
+			"file"		: "index.php",
+			"url" 		: "index"
+		},
+		{
+			"name" 		: "BlogModule",
+			"file"		: "blog.php",
+			"url" 		: "blog",
+			"action" 	: [
+				{ "path" : "/tag/([[:alnum:]]+)", "target" : "displayArticlesForTag"},
+				{ "path" : "/([[:alnum:]]+)", "target" : "displayArticle"}
+			]
+		},
+		{
+			"name" 		: "PortfolioModule",
+			"file"		: "portfolio.php",
+			"url" 		: "portfolio",
+			"action" 	: [
+				{ "path" : "/([[:alnum:]]+)", "target" : "displayPortfolio"}
+			]
+		}
+	]
+}

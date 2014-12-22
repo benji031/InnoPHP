@@ -1,0 +1,11 @@
+#--------------------------------------------------
+# Rewrite Rules URL :
+#--------------------------------------------------
+
+Options +FollowSymlinks
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} !^/server
+RewriteRule ^([^.]+)/?$ /index.php?path=$1 [NC,L,QSA]
+
