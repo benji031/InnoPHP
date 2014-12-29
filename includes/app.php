@@ -1,6 +1,7 @@
 <?php
 	require_once(INCLUDES_DIR.'/config.php');
 	require_once(INCLUDES_DIR.'/smarty/Smarty.class.php');
+	require_once(INCLUDES_DIR.'/core/Module.class.php');
 	require_once(INCLUDES_DIR.'/core/Action.class.php');
 
 	$template = new Smarty();
@@ -34,7 +35,7 @@
 		$url_action = array_slice($url_path, 1);
 		$url_action = "/".implode("/", $url_action);
 
-		$actions = $module["action"];
+		$actions = $module["actions"];
 		foreach ($actions as $action) {
 			$path = $action["path"];
 			if (preg_match("#".$path."#", $url_action, $matches)) {

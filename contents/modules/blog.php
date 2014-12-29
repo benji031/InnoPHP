@@ -21,5 +21,10 @@
 		{
 			echo "Voici mon tag : ".$tag;
 		}
+
+		function displayArticle($article)
+		{
+			echo "Article : $article";
+		}
 	}
 ?>

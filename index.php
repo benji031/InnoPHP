@@ -9,26 +9,29 @@
 
 	require_once(INCLUDES_DIR.'/app.php');
 
-	$module = getModule();
-	$module_name = $module["name"];
-	$module_file = MODULES_DIR."/".$module["file"];
-	$module_url = $module["url"];
+	$module = new Module($_GET['path']);
+	var_dump($module);
 
-	if (isset($module)) {
-		if (is_file($module_file)) {
-			require($module_file);
-			$module_exec = new $module_name;
-			$action = getActionForModule($module);
+	// $module = getModule();
+	// $module_name = $module["name"];
+	// $module_file = MODULES_DIR."/".$module["file"];
+	// $module_url = $module["url"];
+
+	// if (isset($module)) {
+	// 	if (is_file($module_file)) {
+	// 		require($module_file);
+	// 		$module_exec = new $module_name;
+	// 		$action = getActionForModule($module);
 			
-			call_user_method_array($action->getTarget(), $module_exec, $action->getParams());
-		}
-		else {
-			echo "404";
-		}
-	}
-	else {
-		echo "Accueil !";
-	}
+	// 		call_user_method_array($action->getTarget(), $module_exec, $action->getParams());
+	// 	}
+	// 	else {
+	// 		echo "404";
+	// 	}
+	// }
+	// else {
+	// 	echo "Accueil !";
+	// }
 	// if (isset($bp_module)) {
 	// 	if (is_file(getModule())) {
 	// 		require(getModule());
