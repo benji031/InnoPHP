@@ -9,8 +9,15 @@
 
 	require_once(INCLUDES_DIR.'/app.php');
 
-	$module = new Module($_GET['path']);
-	var_dump($module);
+	try {
+		$module = new Module($_GET['path']);
+		var_dump($module);
+	} catch (ModuleNullURLException $e) {
+		echo "Accueil";
+	} catch (ModuleNotFoundException $e) {
+		echo "404";
+	}
+
 
 	// $module = getModule();
 	// $module_name = $module["name"];
